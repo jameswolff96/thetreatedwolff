@@ -1,0 +1,107 @@
+/* Reset styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.flyer {
+  width: 600px;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  text-align: center;
+  color: #333;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.featured, .menu, footer {
+  margin-top: 20px;
+}
+
+.featured h3, .menu h3 {
+  font-size: 1.5em;
+  color: #333;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 8px solid transparent; /* Reserve space for the border */
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      #ff4d4d,           /* Slightly lighter red for shiny effect */
+      #ff4d4d 5px,
+      #ff0000 5px,       /* Rich red for main stripe color */
+      #ff0000 10px,
+      #ffffff 10px,
+      #ffffff 20px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  background-position: bottom; /* Positions background at the bottom */
+  background-size: 100% 8px; /* Restricts height to 8px for a border look */
+  background-repeat: no-repeat; /* Stops background from repeating vertically */
+}
+
+.product {
+  margin: 10px 0;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.product-header h4 {
+  font-size: 1.2em;
+  color: #333;
+  margin: 0;
+}
+
+.price {
+  font-weight: bold;
+  color: #333;
+}
+
+.description {
+  font-size: 1em;
+  color: #666;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #555;
+}
+
+footer p {
+  margin: 5px 0;
+}
