@@ -35,3 +35,11 @@ function calculateTotal() {
   // Update the total display, formatted to two decimal places
   totalAmount.textContent = total;
 }
+
+grecaptcha.ready(function() {
+  grecaptcha
+    .execute('6Lc9r30qAAAAAK73r7eB_3vygpnHCX-2d9n0oHNM', {action: 'homepage'})
+    .then(function(token) {
+      document.getElementById('captchaResponse').value = token;
+    });
+});
