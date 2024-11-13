@@ -36,6 +36,13 @@ function calculateTotal() {
   totalAmount.textContent = total;
 }
 
+document.addEventListener("DOMContentLoaded", (event) => {
+  const date = new Date(Date.now() + 12096e5).toISOString().split('T')[0]
+  const date_needed = document.getElementById('date_needed');
+  date_needed.placeholder = date;
+  date_needed.min = date;
+});
+
 grecaptcha.ready(function() {
   grecaptcha
     .execute('6Lc9r30qAAAAAK73r7eB_3vygpnHCX-2d9n0oHNM', {action: 'homepage'})
