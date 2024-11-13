@@ -151,10 +151,12 @@ footer p {
   background-color: #ffffff;
   margin: 5% auto;
   padding: 20px;
+  max-height: 90%;
   width: 90%;
   max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow-y: scroll;
 }
 
 /* Close button styling */
