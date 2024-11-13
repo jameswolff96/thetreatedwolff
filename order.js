@@ -7,7 +7,7 @@ const totalAmount = document.getElementById('totalAmount');
 // Open modal when button is clicked
 openModalBtn.onclick = () => {
   calculateTotal();
-  const date = new Date(Date.now() + 12096e5).toISOString().split('T')[0]
+  const date = new Date(Date.now() + 864e9).toISOString().split('T')[0]
   const date_needed = document.getElementById('date_needed');
   date_needed.placeholder = date;
   date_needed.min = date;
