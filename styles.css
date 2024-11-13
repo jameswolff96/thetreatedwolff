@@ -192,6 +192,7 @@ footer p {
 .order-form input[type="text"],
 .order-form input[type="email"],
 .order-form input[type="tel"],
+.order-form input[type="date"],
 .order-form input[type="number"],
 .order-form textarea {
   margin-top: 5px;
