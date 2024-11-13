@@ -179,27 +179,35 @@ footer p {
   width: 80px; /* Smaller width for quantity fields */
 }
 
-.order-form .order-items {
+/* Order items container */
+.order-items {
   display: flex;
   flex-direction: column;
+  gap: 10px; /* Space between each product line */
 }
 
-/* Style each order item label and input to appear in a single row */
-.order-items label {
+/* Container for each product row */
+.order-item-row {
+  display: flex;
+  align-items: center; /* Center-aligns label and input vertically */
+  justify-content: space-between; /* Space between label and input */
+}
+
+/* Labels styling */
+.order-item-row label {
   font-weight: normal;
   color: #555;
   margin-top: 5px;
-  display: inline-block;
-  width: calc(100% - 90px);
-  vertical-align: middle;
+  flex: 1; /* Allows the label to take up available space */
 }
 
-.order-items input[type="number"] {
-  width: 80px;
-  float: right;
-  margin-top: 5px;
-  text-align: center;
+/* Quantity input styling */
+.order-item-row input[type="number"] {
+  width: 80px; /* Fixed width for quantity inputs */
+  text-align: center; /* Aligns text inside the input to the right */
+  margin-left: 10px;
 }
+
 
 .order-form textarea {
   resize: vertical;
