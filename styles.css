@@ -21,48 +21,6 @@ body {
   border: 2px solid #333;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-}
-
-.flyer::before {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 200%; /* Slightly larger for horizontal movement */
-  height: 300%;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
-  background-size: 20px 20px;
-  opacity: 0.2;
-  animation: snowfall 15s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Layer 2 of Snowflakes */
-.menu-container:after {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 200%; /* Slightly larger for horizontal movement */
-  height: 300%;
-  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
-  background-size: 30px 30px;
-  opacity: 0.1;
-  animation: snowfall 25s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Keyframes for Snowfall Animation */
-@keyframes snowfall {
-  from {
-    transform: translateY(0) translateX(0);
-  }
-  to {
-    transform: translateY(100%) translateX(-10%);
-  }
 }
 
 header {
