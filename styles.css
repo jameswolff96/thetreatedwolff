@@ -29,21 +29,39 @@ body {
   position: absolute;
   top: -100%;
   left: 0;
-  width: 100%;
+  width: 200%; /* Slightly larger for horizontal movement */
   height: 300%;
-  background-image: url('https://www.transparenttextures.com/patterns/snow.png'); /* Link to a repeating snowflake image or use your own */
-  opacity: 0.3;
-  animation: snowflakes 15s linear infinite;
-  pointer-events: none; /* Allows text to be clickable even over the snowflakes */
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.2;
+  animation: snowfall 15s linear infinite;
+  pointer-events: none;
   z-index: 1;
 }
 
-@keyframes snowflakes {
+/* Layer 2 of Snowflakes */
+.menu-container:after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 200%; /* Slightly larger for horizontal movement */
+  height: 300%;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.5) 2px, transparent 2px);
+  background-size: 30px 30px;
+  opacity: 0.1;
+  animation: snowfall 25s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Keyframes for Snowfall Animation */
+@keyframes snowfall {
   from {
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(100%) translateX(-10%);
   }
 }
 
