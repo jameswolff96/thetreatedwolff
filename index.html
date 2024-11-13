@@ -6,6 +6,7 @@
     <title>The Treated Wolff - Holiday Menu</title>
     <link rel="stylesheet" href="styles.css">
     <script src="order.js" async></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=reCAPTCHA_site_key" async></script>
   </head>
   <body>
     <div class="flyer">
@@ -166,6 +167,9 @@
             <div class="total">
               <strong>Total: $<span id="totalAmount">0</span></strong>
             </div>
+
+            <!-- reCaptcha -->
+            <input type="hidden" id="captchaResponse" name="g-recaptcha-response">
             
             <!-- Submit Button -->
             <button type="submit">Submit Order</button>
