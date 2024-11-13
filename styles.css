@@ -107,7 +107,7 @@ footer p {
   margin: 5px 0;
 }
 
-/* Style for the modal container */
+/* Modal Styles */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; 
@@ -119,12 +119,11 @@ footer p {
   background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
 }
 
-/* Style for modal content */
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
+  margin: 5% auto;
   padding: 20px;
-  width: 80%;
+  width: 90%;
   max-width: 600px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -136,15 +135,75 @@ footer p {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
   color: #000;
+  text-decoration: none;
+}
+
+/* Order Form Styles */
+.order-form h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.order-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.order-form input[type="text"],
+.order-form input[type="email"],
+.order-form input[type="tel"],
+.order-form input[type="number"],
+.order-form textarea {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.order-form input[type="number"] {
+  width: 80px;
+}
+
+.order-form .order-items label {
+  font-weight: normal;
+  color: #555;
+  margin-top: 5px;
+}
+
+.order-form textarea {
+  resize: vertical;
+}
+
+.order-form button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-/* Style for the Total Display */
+.order-form button:hover {
+  background-color: #ff3333;
+}
+
+/* Total Display Styles */
 .total {
   margin-top: 15px;
   font-size: 1.2em;
@@ -152,7 +211,6 @@ footer p {
   color: #333;
 }
 
-/* Optional: Highlight the Total */
 .total strong {
   background-color: #f0f0f0;
   padding: 10px;
