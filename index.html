@@ -94,7 +94,75 @@
         <p>Order Now:</p>
         <p>Text: (918) 261-1838</p>
         <p>Email: treatedwolff@gmail.com</p>
+        <!-- Button to open the modal -->
+        <button id="openModalBtn">Place Your Order Online</button>
       </footer>
+
+      <!-- Modal Structure -->
+      <div id="orderModal" class="modal">
+        <div class="modal-content">
+          <span id="closeModalBtn" class="close">&times;</span>
+          
+          <!-- Form goes here -->
+          <h3>Place Your Order</h3>
+          <form action="https://getform.io/f/bollokqa" method="POST">
+            <!-- Contact Information -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+      
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+      
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Optional">
+
+            <!-- add hidden Honeypot input to prevent spams -->
+            <input type="hidden" name="_gotcha" style="display:none !important">
+      
+            <!-- Order Items -->
+            <div class="order-items">
+              <!-- Mrs. Claus Fudge -->
+              <label for="mrs_claus_fudge_qty">Mrs. Claus Fudge - $10 for 1.5lbs</label>
+              <input type="number" id="mrs_claus_fudge_qty" name="mrs_claus_fudge_qty" placeholder="Qty" min="0" data-price="10">
+      
+              <!-- Nutcracker's Delight -->
+              <label for="nutcracker_delight_qty">Nutcracker's Delight - $9 for 1.5lbs</label>
+              <input type="number" id="nutcracker_delight_qty" name="nutcracker_delight_qty" placeholder="Qty" min="0" data-price="9">
+      
+              <!-- Reindeer Tracks -->
+              <label for="reindeer_tracks_qty">Reindeer Tracks - $9 for 25-30 pieces</label>
+              <input type="number" id="reindeer_tracks_qty" name="reindeer_tracks_qty" placeholder="Qty" min="0" data-price="9">
+      
+              <!-- Cocoa Snow Drops -->
+              <label for="cocoa_snow_drops_qty">Cocoa Snow Drops - $7 for 25-30 pieces</label>
+              <input type="number" id="cocoa_snow_drops_qty" name="cocoa_snow_drops_qty" placeholder="Qty" min="0" data-price="7">
+      
+              <!-- Holiday Snowflakes -->
+              <label for="holiday_snowflakes_qty">Holiday Snowflakes - $8 for 50 pieces</label>
+              <input type="number" id="holiday_snowflakes_qty" name="holiday_snowflakes_qty" placeholder="Qty" min="0" data-price="8">
+      
+              <!-- Gift Bundles -->
+              <label for="north_pole_collection_qty">The North Pole Collection - $34</label>
+              <input type="number" id="north_pole_collection_qty" name="north_pole_collection_qty" placeholder="Qty" min="0" data-price="34">
+      
+              <label for="cocoa_wonderland_qty">Cocoa Wonderland - $27</label>
+              <input type="number" id="cocoa_wonderland_qty" name="cocoa_wonderland_qty" placeholder="Qty" min="0" data-price="27">
+            </div>
+      
+            <!-- Additional Comments -->
+            <label for="comments">Additional Comments or Special Requests:</label>
+            <textarea id="comments" name="comments" rows="4" placeholder="E.g., no pecans, dark chocolate coating, etc."></textarea>
+
+            <!-- Total Display -->
+            <div class="total">
+              <strong>Total: $<span id="totalAmount">0</span></strong>
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit">Submit Order</button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
