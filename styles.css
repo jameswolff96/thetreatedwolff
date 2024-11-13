@@ -107,6 +107,33 @@ footer p {
   margin: 5px 0;
 }
 
+/* Style for the open modal button */
+#openModalBtn {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding around the text */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Make it inline */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+/* Change background color on hover */
+#openModalBtn:hover {
+  background-color: #45a049; /* Slightly darker green */
+  transform: scale(1.05); /* Slight scaling effect */
+}
+
+/* Add focus styles for accessibility */
+#openModalBtn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.5); /* Add a green glow around the button */
+}
+
 /* Modal overlay */
 .modal {
   display: none; /* Hidden by default */
