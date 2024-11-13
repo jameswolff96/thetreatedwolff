@@ -184,10 +184,21 @@ footer p {
   flex-direction: column;
 }
 
-.order-form .order-items label {
+/* Style each order item label and input to appear in a single row */
+.order-items label {
   font-weight: normal;
   color: #555;
   margin-top: 5px;
+  display: inline-block;
+  width: calc(100% - 90px);
+  vertical-align: middle;
+}
+
+.order-items input[type="number"] {
+  width: 80px;
+  float: right;
+  margin-top: 5px;
+  text-align: center;
 }
 
 .order-form textarea {
