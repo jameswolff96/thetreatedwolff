@@ -107,20 +107,21 @@ footer p {
   margin: 5px 0;
 }
 
-/* Modal Styles */
+/* Modal overlay */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; 
-  z-index: 1000; /* Ensure it’s above other elements */
+  position: fixed;
+  z-index: 1000; /* Above all other elements */
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
 }
 
+/* Modal content styling */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #ffffff;
   margin: 5% auto;
   padding: 20px;
   width: 90%;
@@ -129,7 +130,7 @@ footer p {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Close button */
+/* Close button styling */
 .close {
   color: #aaa;
   float: right;
@@ -138,26 +139,25 @@ footer p {
   cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
   color: #000;
   text-decoration: none;
 }
 
-/* Order Form Styles */
-.order-form h3 {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.order-form form {
+/* Order form styling */
+.order-form {
   display: flex;
   flex-direction: column;
 }
 
+.order-form h3 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #333;
+}
+
 .order-form label {
-  margin-top: 10px;
+  margin-top: 12px;
   font-weight: bold;
   color: #333;
 }
@@ -167,15 +167,21 @@ footer p {
 .order-form input[type="tel"],
 .order-form input[type="number"],
 .order-form textarea {
-  padding: 8px;
   margin-top: 5px;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1em;
+  width: 100%;
 }
 
 .order-form input[type="number"] {
-  width: 80px;
+  width: 80px; /* Smaller width for quantity fields */
+}
+
+.order-form .order-items {
+  display: flex;
+  flex-direction: column;
 }
 
 .order-form .order-items label {
@@ -186,26 +192,12 @@ footer p {
 
 .order-form textarea {
   resize: vertical;
+  min-height: 80px;
 }
 
-.order-form button {
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #ff4d4d;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.order-form button:hover {
-  background-color: #ff3333;
-}
-
-/* Total Display Styles */
+/* Total section styling */
 .total {
-  margin-top: 15px;
+  margin-top: 20px;
   font-size: 1.2em;
   text-align: right;
   color: #333;
@@ -215,4 +207,20 @@ footer p {
   background-color: #f0f0f0;
   padding: 10px;
   border-radius: 4px;
+}
+
+/* Submit button styling */
+.order-form button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #ff4d4d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.order-form button[type="submit"]:hover {
+  background-color: #ff3333;
 }
