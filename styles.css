@@ -290,3 +290,62 @@ footer p {
 .order-form button[type="submit"]:hover {
   background-color: #ff3333;
 }
+
+/* Container for the info icon */
+.hover-info-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Styling the info icon */
+.info-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+}
+
+/* Styling the hidden informational message */
+.info-message {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  
+  /* Position above the icon */
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+
+  /* Add transition for smooth appearance */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Small arrow below the message */
+.info-message::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* Make the message visible on hover */
+.hover-info-container:hover .info-message {
+  visibility: visible;
+  opacity: 1;
+}
+
