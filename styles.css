@@ -99,6 +99,10 @@ header p {
   object-fit: cover; /* Ensures images are not distorted */
 }
 
+.featured img {
+  width: 200px;
+}
+
 .price {
   font-weight: bold;
   color: #333;
