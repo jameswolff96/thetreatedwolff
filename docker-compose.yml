@@ -1,0 +1,19 @@
+services:
+  treats:
+    build: .
+    container_name: wolffpack-treats
+    expose:
+      - "80"
+    networks:
+      - wolffnet
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.treats.rule=Host(`treats.wolffpack.works`)"
+      - "traefik.http.routers.treats.entrypoints=websecure"
+      - "traefik.http.routers.treats.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.treats.middlewares=hsts@file"
+      - "traefik.http.services.treats.loadbalancer.server.port=80"
+
+networks:
+  wolffnet:
+    external: true
