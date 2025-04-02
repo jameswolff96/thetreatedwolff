@@ -3,7 +3,7 @@ name: Deploy to DO Droplet
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   deploy:
